@@ -114,7 +114,6 @@ export default function Contact() {
 
   return (
     <section id="contact" style={styles.section}>
-      <section id="contact" style={styles.section}>
         <h2 style={styles.heading1}>
           Contact Me<span style={styles.dot}>.</span>
         </h2>{" "}
@@ -145,32 +144,6 @@ export default function Contact() {
           ))}
         </div>
       </section>
-      <div style={styles.grid}>
-        {links.map(({ label, href, text, icon, external }) => (
-          <div
-            key={label}
-            style={styles.card}
-            onMouseEnter={(e) =>
-              Object.assign(e.currentTarget.style, styles.cardHover)
-            }
-            onMouseLeave={(e) =>
-              Object.assign(e.currentTarget.style, styles.card)
-            }
-          >
-            <a
-              href={href}
-              target={external ? "_blank" : undefined}
-              rel={external ? "noopener noreferrer" : undefined}
-              aria-label={label}
-              title={label}
-              style={styles.link}
-            >
-              <span style={styles.icon}>{icon}</span>
-              {text && <span style={styles.text}>{text}</span>}
-            </a>
-          </div>
-        ))}
-      </div>
-    </section>
+   
   );
 }
